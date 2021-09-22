@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 :root {
+  --theme-white: white;
+  --theme-slack: #3f0f40;
 }
 
 .app {

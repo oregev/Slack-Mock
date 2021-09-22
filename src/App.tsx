@@ -1,8 +1,9 @@
-import React from 'react';
+// Styles
+import { SlackMock } from './SlackMock';
 import './Styles/app.css';
 
-export const App = () => (
+export const App = (): JSX.Element => (
   <div className="app">
-    <h1>Slack mock</h1>
+    <SlackMock />
   </div>
 );
