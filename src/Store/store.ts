@@ -1,12 +1,17 @@
 // Core
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 // Slice
-import counterReducer from '../features/counter/counterSlice';
+import appReducer from './app/slice';
+import authReducer from './auth/slice';
+import roomReducer from './room/slice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    app: appReducer,
+    auth: authReducer,
+    room: roomReducer,
   },
+  devTools: true,
 });
 
 export type AppDispatch = typeof store.dispatch;

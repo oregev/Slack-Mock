@@ -1,24 +1,31 @@
 // Router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Header } from './Components/header/Header';
+// Pages
+import { Chat } from './Pages/chat/Chat';
 // Componets
-import { Home } from './Pages/home/Home';
+import { Header } from './Components/header/Header';
+import { Sidebar } from './Components/sidebar/Sidebar';
+// Style
+import { AppBody } from './Styles/slackMock.style';
 
 export const SlackMock = (): JSX.Element => (
   <div className="SlackMock">
     <Router>
       <Header />
-      <Switch>
-        {/* <Route path="/abute">
+      <AppBody>
+        <Sidebar />
+        <Switch>
+          {/* <Route path="/abute">
           <Home />
         </Route>
         <Route path="/users">
           <Home />
         </Route> */}
-        <Route exact path="/">
-          <Home />
-        </Route>
-      </Switch>
+          <Route exact path="/">
+            <Chat />
+          </Route>
+        </Switch>
+      </AppBody>
     </Router>
   </div>
 );
